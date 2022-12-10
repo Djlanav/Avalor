@@ -137,6 +137,7 @@
   <ItemGroup>
     <ClCompile Include="src\Source Files\game.cpp" />
     <ClCompile Include="src\Source Files\main.cpp" />
+    <ClCompile Include="src\Source Files\player.cpp" />
     <ClCompile Include="src\Source Files\section.cpp" />
     <ClCompile Include="src\Source Files\world.cpp" />
   </ItemGroup>

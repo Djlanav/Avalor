@@ -3,6 +3,8 @@
 #include <stdint.h>
 #include <string>
 
+#define null 0
+
 class Entity {
 private:
 	uint32_t m_initialSectionID;
