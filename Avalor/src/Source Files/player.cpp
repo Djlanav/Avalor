@@ -1,4 +1,5 @@
 #include "player.h"
+
 #include <random>
 #include <iostream>
 
@@ -31,10 +32,15 @@ int Player::attack()
 		std::cout << "You used " << attacks.at(2) << "!";
 		damageDealt = 5;
 	}
-	
 }
 
 int Player::castSpell()
 {
 
+}
+
+// Setters
+void Player::setClass(const std::string& name)
+{
+	player_class = name;
 }

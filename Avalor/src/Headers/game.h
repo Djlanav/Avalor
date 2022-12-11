@@ -1,20 +1,35 @@
 #pragma once
 
 #include "world.h"
-#include <array>
+#include "player.h"
+#include <vector>
 
 class Game {
 public:
-	World* m_avalor;
-	std::array<std::string, 5> classes = { "mage", "warlock", "warrior", "thief", "archer" };
+	World* avalor;
+	Player* player;
+
+	std::vector<std::string> classes = { "mage", "warlock", "warrior", "thief", "archer" };
+
+private:
+	std::string selected_class;
+
+private:
+	void setCustomClassAttribs();
+	void setClass();
 
 public:
 	Game();
 
 	void play();
+	void mainPlay();
 
 	void gameMenu();
+
 	void createCharMenu();
+	void customClass();
+
+	std::string checkPlayerClass(Player* player);
 
 	void prestart();
 	void cleanUp();

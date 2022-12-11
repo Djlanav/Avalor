@@ -17,9 +17,6 @@ private:
 	
 	int currentWeapon; // Gets weapon by ID
 
-private:
-	std::string checkClass();
-
 public:
 	Player();
 
@@ -32,4 +29,8 @@ public:
 	int eat() override;
 	int drink() override;
 	std::string scanSection() override;
+
+// Setters
+public:
+	void setClass(const std::string& name);
 };

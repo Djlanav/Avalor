@@ -2,10 +2,10 @@
 #include "game.h"
 
 bool running = true;
+Game game;
 
 int main()
 {
-	Game game;
 	game.prestart();
 
 	while (running) {

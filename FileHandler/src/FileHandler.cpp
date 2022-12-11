@@ -26,6 +26,7 @@ void FileHandler::createFile(const std::string& name) {
 	fileToCreate << "1. Set name" << std::endl;
 	fileToCreate << "2. Set class" << std::endl;
 	fileToCreate << "3. Create custom class" << std::endl;
+	fileToCreate << "4. Begin playing" << std::endl;
 
 	fileToCreate.close();
 }
