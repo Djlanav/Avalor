@@ -40,7 +40,7 @@ void World::getSectionValidity()
 	if (valid_counter == size) 
 	{
 		std::cout << "Sections generated!\n";
-		Sleep(5000);
+		Sleep(2000);
 		system("cls");
 	}
 	else {

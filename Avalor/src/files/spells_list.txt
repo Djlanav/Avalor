@@ -1,0 +1,27 @@
+C_MAGE:
+s_Fireball
+s_Icebolt
+s_Arcane Protection
+***END***
+
+C_WARLOCK:
+s_Voidbolt
+s_Corruption
+s_Demonic Protection
+***END***
+
+C_THIEF:
+s_Slice
+s_Stun
+***END***
+
+C_WARRIOR:
+s_Blade Stab
+s_Swift Barrage
+s_Warrior's Defense
+***END***
+
+C_ARCHER:
+s_Shoot
+s_Quick Fire
+***END***

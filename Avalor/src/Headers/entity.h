@@ -7,16 +7,14 @@
 
 class Entity {
 private:
-	uint32_t m_initialSectionID;
-	uint32_t m_currentSectionID;
+	uint32_t m_initialSectionID = 0;
+	uint32_t m_currentSectionID = 0;
 	
-	int m_health;
-	int m_hunger;
-	int m_thirst;
+	int m_health = 100;
+	int m_hunger = 10;
+	int m_thirst = 10;
 
 public:
-	Entity();
-
 	virtual void move() = 0;
 	virtual void die() = 0;
 	virtual int eat() = 0;

@@ -2,20 +2,25 @@
 
 #include "entity.h"
 #include <vector>
+#include <map>
 
 class Player : public Entity {
 private:
 	std::string name;
 	std::string player_class;
+	std::string current_spell;
 
-	std::vector<std::string> spells;
-	std::vector<std::string> attacks;
+	std::map<int, std::string> spells;
+	std::map<int, std::string> attacks;
 
-	int attackPower;
+	int attack_power;
 	int arcane;
 	int armor;
 	
-	int currentWeapon; // Gets weapon by ID
+	int current_weapon; // Gets weapon by ID
+
+private:
+	void selectSpell();
 
 public:
 	Player();
@@ -32,5 +37,12 @@ public:
 
 // Setters
 public:
-	void setClass(const std::string& name);
+	void setterSetClass(const std::string& name);
+	void setterSetName(const std::string& name);
+
+// Getters
+public:
+	std::map<int, std::string>& getSpells();
+	std::string& getClass();
+	std::string& getName();
 };

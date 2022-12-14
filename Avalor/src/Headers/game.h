@@ -9,14 +9,14 @@ public:
 	World* avalor;
 	Player* player;
 
-	std::vector<std::string> classes = { "mage", "warlock", "warrior", "thief", "archer" };
+	std::vector<std::string> classes;
 
 private:
 	std::string selected_class;
 
 private:
 	void setCustomClassAttribs();
-	void setClass();
+	void setClassByInput();
 
 public:
 	Game();
@@ -28,8 +28,9 @@ public:
 
 	void createCharMenu();
 	void customClass();
+	void readClassFile();
 
-	std::string checkPlayerClass(Player* player);
+	void setPlayerClass();
 
 	void prestart();
 	void cleanUp();
