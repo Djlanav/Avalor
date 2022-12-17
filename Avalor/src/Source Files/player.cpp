@@ -4,10 +4,10 @@
 #include <random>
 #include <iostream>
 
-extern Game game; // pointer to the main game object/instance
+extern Game game;
 
 Player::Player() 
-	: name("Default"), attack_power(1), arcane(1), armor(1), current_weapon(0)
+	: name("Default"), attack_power(1), arcane(1), armor(1), current_weapon(0), level(1), xp(0)
 {
 	// Default attacks
 	this->attacks = {{1, "Punch"},
@@ -100,9 +100,36 @@ int Player::drink()
 	return 5;
 }
 
+// Scan only ONE tile! This will be for getting like a town or something present or resources
 std::string Player::scanSection()
 {
 	return "Default";
+}
+
+// Return an array of 8 tuples each containg the neighbouring section ID and material
+std::array<std::tuple<uint64_t, std::string>, 8> Player::scanSections()
+{
+	std::array<std::tuple<uint64_t, std::string>, 8> neighbourSections;
+	auto sectionArray = game.avalor->getSectionArray(); // get shared_ptr
+
+	// Initialize
+	for (auto neighbour : neighbourSections)
+	{
+		std::get<0>(neighbour) = getNeighbourSectionID(neighbourSections); // ID
+		std::get<1>(neighbour) = "string"; // material
+	}
+
+	return neighbourSections;
+}
+
+uint64_t getNeighbourSectionID(std::array<std::tuple<uint64_t, std::string>, 8>& arr_tuple)
+{
+	auto sectionVector = game.avalor->getSectionArray(); // Actually a vector :)
+
+	for (int i = 0; i < 8; i++)
+	{
+
+	}
 }
 
 // Setters

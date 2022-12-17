@@ -16,6 +16,8 @@ private:
 	int attack_power;
 	int arcane;
 	int armor;
+	int level;
+	int xp;
 	
 	int current_weapon; // Gets weapon by ID
 
@@ -33,7 +35,9 @@ public:
 	void die() override;
 	int eat() override;
 	int drink() override;
+
 	std::string scanSection() override;
+	std::array<std::tuple<uint64_t, std::string>, 8> scanSections() override;
 
 // Setters
 public:

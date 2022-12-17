@@ -187,12 +187,36 @@ void Game::readClassFile()
 	}
 }
 
+// Shows what the player can do
 void Game::gameMenu()
 {
 	system("cls");
-	std::cout << "W.I.P";
+	FileHandler fh;
 
+	std::cout << "========== " << player->getName() << "==========\n";
+	fh.readFile(".\\\src\\files\\game_menu.txt");
+	std::cout << "\n========================";
+
+	Sleep(4000);
 	running = false;
+}
+
+void Game::getGameMenuInput()
+{
+	int choice = -1;
+	switch (choice)
+	{
+	case 1:
+	{
+		// TODO
+	}
+
+	case 2:
+	{
+		player->move();
+	}
+
+	}
 }
 
 // Setup stuff

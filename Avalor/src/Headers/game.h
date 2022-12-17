@@ -17,6 +17,7 @@ private:
 private:
 	void setCustomClassAttribs();
 	void setClassByInput();
+	void getGameMenuInput();
 
 public:
 	Game();

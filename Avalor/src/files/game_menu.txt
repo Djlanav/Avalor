@@ -1,0 +1,4 @@
+1. Open Inventory
+2. Move
+3. Talk
+4. Quit

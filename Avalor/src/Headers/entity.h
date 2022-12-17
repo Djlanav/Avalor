@@ -2,6 +2,9 @@
 
 #include <stdint.h>
 #include <string>
+#include <array>
+#include <tuple>
+#include "section.h"
 
 #define null 0
 
@@ -19,5 +22,7 @@ public:
 	virtual void die() = 0;
 	virtual int eat() = 0;
 	virtual int drink() = 0;
+
 	virtual std::string scanSection() = 0;
+	virtual std::array<std::tuple<uint64_t, std::string>, 8> scanSections() = 0;
 };
